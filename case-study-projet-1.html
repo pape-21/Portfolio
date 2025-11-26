@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE 2.1 : Construire un Réseau Informatique Multisites | Étude de Cas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-fixed bg-light-transparent">
+        <div class="container header-content">
+            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="skills.html" class="nav-link">Compétences</a>
+                <a href="projects.html" class="nav-link active">Projets</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="case-study-header" class="study-header scroll-reveal">
+            <div class="container-narrow">
+                <h1 class="page-title">SAE 2.1 : Construction d'un Réseau Informatique Multisites</h1>
+
+                <p class="study-summary page-description">
+                    Mise en œuvre complète d'une infrastructure réseau étendu (WAN) pour interconnecter deux sites distants (Paris et Poitiers), incluant le routage dynamique OSPF, la segmentation VLAN, la translation d'adresses (NAT/PAT) et le déploiement de services applicatifs critiques (DNS, HTTP, SSH).
+                </p>
+
+                <div class="meta-tags">
+                    <span class="tag tag-role tag-tech accent-color">Rôle: Développeur/Administrateur Réseau</span>
+                    <span class="tag tag-date tag-tech">Date: Juin 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-visual scroll-reveal delay-1">
+            <div class="container">
+                <figure>
+                    <img src="./images/gns3.png" alt="Schéma d'architecture du projet sur GNS3" class="full-width-image">
+                    <figcaption class="caption">Topologie de l'infrastructure multisites (Siège Paris, Filiale Poitiers et FAI) réalisée sur GNS3/Proxmox.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="problem" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">1. Le Défi de l'Interconnexion Multisites</h2>
+                <p class="section-content">
+                    L'objectif de cette SAE était de simuler l'interconnexion sécurisée de deux entités d'entreprise distantes via un réseau opérateur (FAI). Ce scénario requérait des solutions de routage robustes, une segmentation fine des utilisateurs, et l'exposition contrôlée des services vers Internet.
+                </p>
+                <h3 class="subsection-heading">Objectifs Clés de l'Infrastructure</h3>
+                <ul class="styled-list objectives-list">
+                    <li><strong>Interconnexion multisites</strong> : Interconnecter les sites distants via un réseau FAI simulé.</li>
+                    <li><strong>Segmentation (VLANs)</strong> : Segmenter logiquement les réseaux locaux (VLANs : ADMIN, R&D, PROD, COMPTA, VENTE).</li>
+                    <li><strong>Services applicatifs</strong> : Déployer des services fondamentaux (DNS, HTTP, SSH).</li>
+                    <li><strong>Sécurité périmétrique</strong> : Mettre en place des règles de sécurité (PAT, ACL) pour contrôler l'accès Internet.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solution" class="study-section scroll-reveal">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">2. La Solution Technique & Mise en Œuvre</h2>
+
+                <p class="section-content">
+                    L'infrastructure a été entièrement virtualisée via <strong>GNS3</strong> et <strong>Proxmox</strong>, en utilisant des équipements <strong>Cisco</strong> (vIOS) pour le routage et la commutation multicouche (MLS-1, SW-1, etc.). La solution a été structurée en deux phases principales : l'infrastructure et les services.
+                </p>
+
+                <h3 class="subsection-heading">Phase 1 : Routage et Accès Réseau</h3>
+                <ul class="tech-list">
+                    <li><span class="tech-badge">Cisco IOS & Routage Inter-VLAN</span> : Configuration du <strong>MLS-1</strong> et des routeurs périphériques (R-GW-1, R-GW-2).</li>
+                    <li><span class="tech-badge">OSPF</span> : Déploiement du routage dynamique sur le réseau FAI pour assurer la connectivité entre les sites.</li>
+                    <li><span class="tech-badge">NAT / PAT</span> : Configuration de la translation d'adresses sur les routeurs de passerelle pour l'accès à Internet.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Phase 2 : Déploiement des Services & Sécurité</h3>
+                <ul class="tech-list">
+                    <li><span class="tech-badge">Services Linux</span> : Installation et configuration des serveurs <strong>DNS</strong>, <strong>HTTP</strong> (Apache/Nginx) et <strong>SSH</strong> sur les machines virtuelles (VM) Linux.</li>
+                    <li><span class="tech-badge">ACLs</span> : Mise en œuvre de Listes de Contrôle d'Accès pour sécuriser et filtrer les flux entre les différents VLANs et vers la DMZ.</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section id="results" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">3. Validation & Compétences Acquises</h2>
+                <p class="section-content">
+                    La validation finale a inclus une présentation orale et une démonstration des fonctionnalités, justifiant le plan d'adressage et le fonctionnement de chaque service installé.
+                </p>
+
+                <h3 class="subsection-heading">Bénéfices Techniques Confirmés</h3>
+                <ul class="styled-list results-list">
+                    <li><strong>Interconnexion Validée</strong> : Les services DNS/HTTP/SSH sont accessibles entre les sites de Paris et Poitiers.</li>
+                    <li><strong>Sécurité</strong> : Les règles NAT/PAT et les ACLs filtrent correctement les flux selon les politiques définies.</li>
+                    <li><strong>Maîtrise OSPF</strong> : Capacité à configurer et dépanner un protocole de routage dynamique complexe.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Expertise Développée</h3>
+                <p>
+                    J'ai acquis une expertise complète dans le cycle de vie d'un réseau étendu : de la planification (adressage) à l'exploitation (routage, services), en passant par la sécurité périmétrique (NAT/ACLs). La manipulation de GNS3 avec un serveur backend Proxmox a également consolidé mes compétences en virtualisation et en environnement de laboratoire.
+                </p>
+            </div>
+        </section>
+
+        <section id="next-project-cta" class="cta-section scroll-reveal">
+            <div class="container">
+                <a href="projects.html" class="btn btn-secondary hover-effect">← Retour à la liste des projets</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-links">
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
+            </p>
+            <p class="footer-copyright">
+                © 2025 Pape Birame Fall. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script>
+</body>
+</html>

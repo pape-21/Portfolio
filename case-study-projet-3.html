@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application de Gestion des Sauveteurs | Étude de Cas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-fixed bg-light-transparent">
+        <div class="container header-content">
+            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="skills.html" class="nav-link">Compétences</a>
+                <a href="projects.html" class="nav-link active">Projets</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="case-study-header" class="study-header scroll-reveal">
+            <div class="container-narrow">
+                <h1 class="page-title">SAE : Application Web de Gestion des Sauveteurs (Spéléo-secours)</h1>
+
+                <p class="study-summary page-description">
+                    Développement Fullstack d'une application de gestion de crise en milieu souterrain pour le Spéléo-Secours Français. Implémentation d'une authentification multi-profils, modélisation d'une BDD complexe, et affichage dynamique d'un planning horaire par intervalle de 30 minutes.
+                </p>
+
+                <div class="meta-tags">
+                    <span class="tag tag-role tag-tech accent-color">Rôle: Développeur PHP / Administrateur BDD</span>
+                    <span class="tag tag-date tag-tech">Date: Juin 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-visual scroll-reveal delay-1">
+            <div class="container">
+                <figure>
+                    <img src="./images/application-sauveteurs.png" alt="Interface de planning de l'application de gestion des sauveteurs" class="full-width-image">
+                    <figcaption class="caption">Prototype de l'interface de gestion du planning des sauveteurs (frise chronologique par quart d'heure).</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="problem" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">1. Le Défi de la Gestion de Crise et de la Fatigue</h2>
+                <p class="section-content">
+                    Lors d'une opération de secours souterrain pouvant durer plus de 72 heures, la gestion efficace des équipes est vitale. L'enjeu était de créer un outil simple et fiable permettant aux bénévoles du SSF de <strong>planifier les temps de travail et de repos</strong> de plus de 50 sauveteurs en temps réel, afin de prévenir les accidents liés à la fatigue.
+                </p>
+                <h3 class="subsection-heading">Exigences Fonctionnelles Clés</h3>
+                <ul class="styled-list objectives-list">
+                    <li><strong>Sécurité et Accès</strong> : Implémentation d'un système d'authentification robuste avec gestion des profils (Administrateur, Gestionnaire, Lecture).</li>
+                    <li><strong>Gestion des Données</strong> : Enregistrement des sauveteurs, de leurs spécialités (médicale, désobstruction, communication, etc.) et des informations générales de l'opération.</li>
+                    <li><strong>Planning Chronologique</strong> : Affichage d'un tableau dynamique où chaque colonne représente un intervalle de <strong>30 minutes</strong> depuis le début de l'opération.</li>
+                    <li><strong>Visualisation Instantanée</strong> : Utilisation d'un code couleur pour indiquer l'état de chaque sauveteur (disponible, sous terre, repos, préparation), garantissant une lecture rapide par des utilisateurs non-informaticiens.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solution" class="study-section scroll-reveal">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">2. La Solution Technique & Architecture Fullstack</h2>
+
+                <p class="section-content">
+                    La solution a été développée en <strong>PHP</strong> (côté serveur) pour gérer la logique et l'interaction avec la base de données <strong>MariaDB</strong>. Un accent particulier a été mis sur la modélisation de la BDD pour gérer la dimension temporelle du planning.
+                </p>
+
+                <h3 class="subsection-heading">Modélisation de la Base de Données (SQL)</h3>
+                <ul class="tech-list">
+                    <li><span class="tech-badge">MariaDB 10+</span> : Base de données relationnelle.</li>
+                    <li><span class="tech-badge">Tables Maîtresses</span> : Gestion des utilisateurs (profils), des sauveteurs, des spécialités et des types de mission/statuts.</li>
+                    <li><span class="tech-badge">Table Planning (Cruciale)</span> : Stockage des affectations en fonction d'un index temporel, permettant de relier un sauveteur à un statut pour chaque tranche de 30 minutes.</li>
+                    <li><span class="tech-badge">Sécurité des Mots de Passe</span> : Utilisation de fonctions de hachage sécurisées lors de l'authentification.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Développement PHP et Sécurité</h3>
+                <ul class="tech-list">
+                    <li><span class="tech-badge">PHP 7.4+</span> : Langage de programmation pour la logique de connexion, les requêtes BDD et la génération HTML.</li>
+                    <li><span class="tech-badge">Sessions</span> : Gestion des sessions et des droits d'accès pour implémenter les profils <strong>Administration</strong>, <strong>Gestionnaire</strong> et <strong>Lecture</strong>.</li>
+                    <li><span class="tech-badge">Frise Chronologique</span> : Logique PHP pour calculer dynamiquement le nombre de colonnes du planning en fonction de l'heure de début de l'opération et de l'heure actuelle.</li>
+                    <li><span class="tech-badge">Validation des Saisies</span> : Vérification et sécurisation des données POST/GET pour prévenir les injections SQL et failles XSS.</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section id="results" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">3. Validation & Compétences Acquises</h2>
+                <p class="section-content">
+                    L'application a permis de valider la faisabilité d'un système de gestion de ressources complexe, critique et à forte contrainte temporelle, en se basant sur une architecture Web robuste et sécurisée.
+                </p>
+
+                <h3 class="subsection-heading">Bénéfices Techniques Confirmés</h3>
+                <ul class="styled-list results-list">
+                    <li><strong>Développement Fullstack</strong> : Maîtrise de l'intégration des technologies PHP (Backend) et SQL (BDD) pour une application dynamique.</li>
+                    <li><strong>Sécurité des Utilisateurs</strong> : Implémentation réussie de l'authentification et de la gestion des droits d'accès complexes.</li>
+                    <li><strong>Modélisation BDD Avancée</strong> : Capacité à concevoir une BDD relationnelle pour gérer des données temporelles (planning par tranches de 30 min).</li>
+                    <li><strong>Ergonomie</strong> : Conception d'une interface simple, visuelle et utilisant le code couleur pour faciliter la prise de décision rapide en situation de crise.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Leçons Apprises</h3>
+                <p>
+                    Ce projet a été l'occasion d'approfondir la gestion des <strong>droits et des rôles</strong> utilisateurs, ainsi que la manière d'optimiser les requêtes SQL pour la construction d'un tableau d'affichage dynamique et potentiellement très grand (longue durée d'opération * grand nombre de sauveteurs).
+                </p>
+            </div>
+        </section>
+
+        <section id="next-project-cta" class="cta-section scroll-reveal">
+            <div class="container">
+                <a href="projects.html" class="btn btn-secondary hover-effect">← Retour à la liste des projets</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-links">
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
+            </p>
+            <p class="footer-copyright">
+                © 2025 Pape Birame Fall. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script>
+</body>
+</html>

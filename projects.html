@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets | Pape Birame Fall</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-fixed bg-light-transparent">
+        <div class="container header-content">
+            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="skills.html" class="nav-link">Compétences</a>
+                <a href="projects.html" class="nav-link active">Projets</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="projects-header" class="header-section scroll-reveal">
+            <div class="container-narrow">
+                <h1 class="page-title">Mes Projets & Études de Cas</h1>
+                <p class="page-description">
+                    Un aperçu détaillé de mes réalisations dans les domaines des Réseaux, de la Sécurité et de la Programmation. Chaque projet est accompagné d'une étude de cas (Problème, Solution, Résultat).
+                </p>
+            </div>
+        </section>
+
+        <section id="projects-filters" class="filters-section scroll-reveal delay-1">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="btn btn-filter active" data-filter="all">Tout</button>
+                    <button class="btn btn-filter" data-filter="networks">Réseaux</button>
+                    <button class="btn btn-filter" data-filter="security">Sécurité</button>
+                    <button class="btn btn-filter" data-filter="scripting">Scripting & Dev</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects-grid" class="projects-gallery">
+            <div class="container grid-layout">
+                
+                <article class="project-card hover-lift scroll-reveal" data-category="networks">
+    <a href="case-study-projet-1.html" class="project-link">
+        <div class="project-image-placeholder">
+            🏢 Infra Complète
+        </div>
+        <h2 class="project-name">Construction d'un Réseau Informatique</h2>
+        <div class="project-tags">
+            <span class="tag tag-tech accent-color">OSPF</span>
+            <span class="tag tag-tech accent-color">DNS/DHCP</span>
+            <span class="tag tag-tech accent-color">Apache/Nginx</span>
+        </div>
+        <p class="project-excerpt" style="margin-top:10px; font-size:0.9rem; color:var(--color-text-light);">
+            Mise en place de services réseaux critiques et routage FAI. 
+        </p>
+        <span class="read-more">Voir l'étude de cas →</span>
+    </a>
+</article>
+
+<article class="project-card hover-lift scroll-reveal delay-1" data-category="scripting">
+    <a href="case-study-projet-2.html" class="project-link">
+        <div class="project-image-placeholder">
+            🐍 Data Visualization
+        </div>
+        <h2 class="project-name">Traitement et Analyse de Données</h2>
+        <div class="project-tags">
+            <span class="tag tag-tech accent-color">Python</span>
+            <span class="tag tag-tech accent-color">Apache</span>
+            <span class="tag tag-tech accent-color">Gantt</span>
+        </div>
+        <p class="project-excerpt" style="margin-top:10px; font-size:0.9rem; color:var(--color-text-light);">
+            Extraction serveur, génération de graphiques et présentation Web. 
+        </p>
+        <span class="read-more">Voir l'étude de cas →</span>
+    </a>
+</article>
+
+<article class="project-card hover-lift scroll-reveal delay-2" data-category="dev">
+    <a href="case-study-projet-3.html" class="project-link">
+        <div class="project-image-placeholder">
+            💻 Fullstack
+        </div>
+        <h2 class="project-name">Projet Application de gestion des sauveteurs</h2>
+        <div class="project-tags">
+            <span class="tag tag-tech accent-color">PHP</span>
+            <span class="tag tag-tech accent-color">SQL</span>
+            <span class="tag tag-tech accent-color">Sécurité</span>
+        </div>
+        <p class="project-excerpt" style="margin-top:10px; font-size:0.9rem; color:var(--color-text-light);">
+            Gestion utilisateurs, authentification sécurisée et BDD relationnelle. 
+        </p>
+        <span class="read-more">Voir l'étude de cas →</span>
+    </a>
+</article>
+
+<article class="project-card hover-lift scroll-reveal delay-3" data-category="telecoms">
+    <a href="case-study-projet-4.html" class="project-link">
+        <div class="project-image-placeholder">
+            📡 Signaux
+        </div>
+        <h2 class="project-name">Analyse de Support de Transmission</h2>
+        <div class="project-tags">
+            <span class="tag tag-tech accent-color">Modulation</span>
+            <span class="tag tag-tech accent-color">Porteuse</span>
+            <span class="tag tag-tech accent-color">Physique</span>
+        </div>
+        <p class="project-excerpt" style="margin-top:10px; font-size:0.9rem; color:var(--color-text-light);">
+            Génération et analyse de signaux modulés. 
+        </p>
+        <span class="read-more">Voir l'étude de cas →</span>
+    </a>
+</article>
+
+
+<article class="project-card hover-lift scroll-reveal delay-3" data-category="systems security">
+    <a href="case-study-projet-7.html" class="project-link">
+        <div class="project-image-placeholder">
+            🔒 Mail Server
+        </div>
+        <h2 class="project-name">Serveur de Messagerie Sécurisé (MIAB)</h2>
+        <div class="project-tags">
+            <span class="tag tag-tech accent-color">Mail-in-a-Box</span>
+            <span class="tag tag-tech accent-color">DNS (SPF/DKIM)</span>
+            <span class="tag tag-tech accent-color">Linux</span>
+        </div>
+        <p class="project-excerpt" style="margin-top:10px; font-size:0.9rem; color:var(--color-text-light);">
+            Déploiement d'une solution complète et sécurisée pour la gestion des e-mails.
+        </p>
+        <span class="read-more">Voir l'étude de cas →</span>
+    </a>
+</article>
+        </section>
+        
+        <section id="cta-contact" class="cta-section scroll-reveal">
+            <div class="container">
+                <h2 class="section-title">Intéressé par une collaboration ?</h2>
+                <a href="contact.html" class="btn btn-primary btn-large hover-effect">
+                    Contactez-moi directement
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-links">
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
+            </p>
+            <p class="footer-copyright">
+                © 2025 Pape Birame Fall. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script> 
+    </body>
+</html>

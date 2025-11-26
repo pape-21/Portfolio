@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE Ingénierie ToIP : Téléphonie | Étude de Cas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-fixed bg-light-transparent">
+        <div class="container header-content">
+            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="skills.html" class="nav-link">Compétences</a>
+                <a href="projects.html" class="nav-link active">Projets</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="case-study-header" class="study-header scroll-reveal">
+            <div class="container-narrow">
+                <h1 class="page-title">SAE Ingénierie de la ToIP : Déploiement Multisites et Intégration d'IA</h1>
+
+                <p class="study-summary page-description">
+                    Déploiement complet d'une architecture de téléphonie multisites hétérogène (Mitel, Asterisk, Freeswitch) avec interconnexion via Trunk SIP. Ce projet comprenait l'intégration d'un Large Language Model (LLM) pour des services vocaux conversationnels avancés.
+                </p>
+
+                <div class="meta-tags">
+                    <span class="tag tag-role tag-tech accent-color">Rôle: Ingénieur Téléphonie sur IP / Développeur Services</span>
+                    <span class="tag tag-date tag-tech">Date: Février - Juin 2026</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-visual scroll-reveal delay-1">
+            <div class="container">
+                <figure>
+                    <img src="./images/toip-architecture.png" alt="Schéma d'architecture de l'infrastructure Mitel, Asterisk, Freeswitch et LLM" class="full-width-image">
+                    <figcaption class="caption">Architecture complète de la solution ToIP multisites, incluant les interconnexions SIP/BRI et le service LLM.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="problem" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">1. Le Défi de l'Intégration et de l'Innovation en Téléphonie</h2>
+                <p class="section-content">
+                    Ce projet majeur nécessitait de surmonter la complexité de faire cohabiter des environnements propriétaires (MITEL) et open-source (Asterisk, Freeswitch). Le défi principal était d'assurer l'interopérabilité pour le routage des appels tout en innovant par l'ajout de fonctionnalités modernes, notamment l'intégration d'une IA conversationnelle dans la chaîne vocale.
+                </p>
+                <h3 class="subsection-heading">Exigences et Complexités Techniques</h3>
+                <ul class="styled-list objectives-list">
+                    <li><strong>Interconnexion Hétérogène</strong> : Établir des Trunk SIP fiables entre Mitel, Asterisk Entreprise et les serveurs intermédiaires (Asterisk Op, Freeswitch).</li>
+                    <li><strong>Passerelle BRI/SIP</strong> : Configurer une passerelle <strong>PATTON</strong> pour convertir les flux <strong>T0 (BRI)</strong> du Mitel vers le protocole <strong>SIP</strong>.</li>
+                    <li><strong>LLM Conversationnel</strong> : Développer une boucle complète : <strong>Parole → Texte (STT) → IA (ChatGPT/Mistral) → Parole (TTS)</strong>, accessible via téléphone ou WebRTC.</li>
+                    <li><strong>Monitoring & Gestion</strong> : Mettre en œuvre la collecte de données d'appel (CDR) et leur visualisation graphique via <strong>Grafana</strong>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solution" class="study-section scroll-reveal">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">2. La Solution Technique : Déploiement et Scripting</h2>
+
+                <p class="section-content">
+                    La solution a été abordée de manière incrémentale, en validant chaque interconnexion et chaque service avant l'intégration finale.
+                </p>
+
+                <h3 class="subsection-heading">Infrastructure ToIP et Routage</h3>
+                <ul class="tech-list">
+                    <li><span class="tech-badge">Asterisk / Freeswitch</span> : Utilisés comme serveurs d'interconnexion pour le routage d'appels et la gestion des numéros SDA (05 49...).</li>
+                    <li><span class="tech-badge">PATTON Gateway</span> : Configuration minutieuse des <strong>profils ISDN et SIP</strong> pour la traduction du flux T0 du Mitel. (Livrable : Tutoriel PATTON)</li>
+                    <li><span class="tech-badge">SBC (Session Border Controller)</span> : Mise en œuvre des fonctionnalités SBC sur les routeurs périphériques pour la sécurité et la médiation des sessions SIP.</li>
+                    <li><span class="tech-badge">WebRTC</span> : Déploiement d'un serveur WebRTC pour offrir un accès téléphonique via navigateur, intégrant le service LLM.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Services Avancés et IA</h3>
+                <ul class="tech-list">
+                    <li><span class="tech-badge">LLM (ChatGPT/Mistral)</span> : Développement du script Python pour l'orchestration des appels API (STT, IA, TTS) avec Asterisk.</li>
+                    <li><span class="tech-badge">Voicemail-to-Email</span> : Configuration de <strong>Postfix</strong> sur Asterisk Entreprise pour transférer automatiquement les messages vocaux des salariés sur leur boîte mail.</li>
+                    <li><span class="tech-badge">Grafana & CDR</span> : Utilisation de la solution <strong>CDR (Call Detail Records)</strong> pour collecter les statistiques d'appels, puis création de tableaux de bord dans Grafana pour la visualisation graphique.</li>
+                    <li><span class="tech-badge">SVI</span> : Mise en œuvre de Standards Vocaux Interactifs sur les serveurs Mitel et Asterisk.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Gestion de Projet</h3>
+                <p class="section-content">
+                    Le projet a été piloté par un <strong>Diagramme de Gantt</strong> détaillé, mis à jour à chaque séance pour suivre l'avancement, gérer les dépendances et adapter la répartition des tâches suite aux problèmes rencontrés.
+                </p>
+
+            </div>
+        </section>
+
+        <section id="results" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">3. Validation & Compétences Mises en Œuvre</h2>
+                <p class="section-content">
+                    Ce projet a démontré ma capacité à gérer des infrastructures de communication de bout en bout, de la couche physique (BRI) aux services applicatifs (IA).
+                </p>
+
+                <h3 class="subsection-heading">Compétences Techniques Maîtrisées</h3>
+                <ul class="styled-list results-list">
+                    <li><strong>Ingénierie ToIP Profonde</strong> : Maîtrise avancée des PABX/IPBX (Mitel, Asterisk) et des protocoles d'interconnexion (SIP Trunk, BRI/Patton).</li>
+                    <li><strong>Développement de Services Critiques</strong> : Implémentation fonctionnelle de la chaîne <strong>IA vocale</strong> (STT/LLM/TTS) et des services de messagerie (Postfix).</li>
+                    <li><strong>Monitoring</strong> : Capacité à mettre en place des outils de supervision (Grafana) pour mesurer les KPI de la téléphonie (temps d'appel, taux de connexion).</li>
+                    <li><strong>Gestion de Projet Complexe</strong> : Utilisation des outils (Gantt, Plan d'adressage NAT/IP) pour une livraison structurée et documentée.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Leçons Apprises</h3>
+                <p>
+                    Le principal défi était le débogage des appels entre les équipements hétérogènes (surtout entre le Mitel/Patton et le Trunk SIP Asterisk), qui a nécessité l'utilisation intensive de <strong>Wireshark</strong> pour analyser les messages SIP et RTP. L'intégration de l'IA a mis en évidence l'importance des scripts de médiation (Python) pour adapter les APIs Web au contexte de la téléphonie.
+                </p>
+            </div>
+        </section>
+
+        <section id="next-project-cta" class="cta-section scroll-reveal">
+            <div class="container">
+                <a href="projects.html" class="btn btn-secondary hover-effect">← Retour à la liste des projets</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-links">
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
+            </p>
+            <p class="footer-copyright">
+                © 2025 Pape Birame Fall. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script>
+</body>
+</html>

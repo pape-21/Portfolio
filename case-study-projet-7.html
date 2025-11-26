@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déploiement d'un Serveur de Mail Sécurisé (Mail-in-a-Box) | Étude de Cas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-fixed bg-light-transparent">
+        <div class="container header-content">
+            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="skills.html" class="nav-link">Compétences</a>
+                <a href="projects.html" class="nav-link active">Projets</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="case-study-header" class="study-header scroll-reveal">
+            <div class="container-narrow">
+                <h1 class="page-title">Déploiement d'un Serveur de Messagerie Complet (Mail-in-a-Box)</h1>
+
+                <p class="study-summary page-description">
+                    Mise en œuvre d'une solution complète de messagerie électronique auto-hébergée (SMTP, IMAP, Webmail et cloud), gestion de la sécurité DNS critique (SPF, DKIM, DMARC) et durcissement du serveur pour garantir une délivrabilité optimale.
+                </p>
+
+                <div class="meta-tags">
+                    <span class="tag tag-role tag-tech accent-color">Rôle: Administrateur Système & Sécurité DNS</span>
+                    <span class="tag tag-date tag-tech">Date: Depuis Juin 2025 (Maintenance continue) </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-visual scroll-reveal delay-1">
+            <div class="container">
+                <figure>
+                    <img src="./images/miab.png" alt="Tableau de bord de Mail-in-a-Box" class="full-width-image">
+                    <figcaption class="caption">Tableau de bord de Mail-in-a-Box confirmant le statut opérationnel des services et identifiant les vulnérabilités du serveur SSH.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="problem" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">1. Le Défi de la Fiabilité et de la Sécurité d'un Mail Server</h2>
+                <p class="section-content">
+                    L'objectif était de maîtriser l'architecture complexe d'un serveur de mail pour l'héberger personnellement, tout en assurant une <strong>délivrabilité</strong> (non-classement en spam) parfaite et une sécurité maximale. Ce processus exige la gestion d'une multitude de protocoles (SMTP, POP3/IMAP, HTTPS) et de nombreux enregistrements DNS spécifiques.
+                </p>
+                <h3 class="subsection-heading">Objectifs Clés de la Mise en œuvre</h3>
+                <ul class="styled-list objectives-list">
+                    <li><strong>Déploiement Complet</strong> : Mettre en place la stack complète (Postfix, Dovecot, SpamAssassin) de manière automatisée.</li>
+                    <li><strong>Sécurité DNS</strong> : Configurer les enregistrements critiques <strong>SPF</strong>, <strong>DKIM</strong> et <strong>DMARC</strong> pour valider l'authenticité de l'expéditeur.</li>
+                    <li><strong>Durcissement</strong> : Sécuriser les accès SSH et les certificats TLS/SSL pour tout le trafic.</li>
+                    <li><strong>Gestion des Comptes</strong> : Fournir un accès Webmail et synchroniser mes comptes mail sur différents clients (Outlook, Thunderbird).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solution" class="study-section scroll-reveal">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">2. La Solution Technique : Mail-in-a-Box sous Linux</h2>
+
+                <p class="section-content">
+                    J'ai choisi la solution open source <strong>Mail-in-a-Box</strong>, qui automatise l'installation et la configuration de tous les composants de la stack mail sous un environnement <strong>Linux Ubuntu Server</strong>. Cela a permis de se concentrer sur les défis de la sécurité et de la connectivité externe.
+                </p>
+
+                <h3 class="subsection-heading">Architecture et Configuration</h3>
+                <ul class="tech-list">
+                    <li><span class="tech-badge">Mail-in-a-Box</span> : Installation automatisée de <strong>Postfix</strong>, <strong>Dovecot</strong>, et <strong>Nginx</strong> (pour le Webmail).</li>
+                    <li><span class="tech-badge">DNS Records</span> : Modification manuelle des enregistrements <strong>MX</strong> et vérification des enregistrements <strong>A/AAAA</strong>.</li>
+                    <li><span class="tech-badge">Certificats SSL/TLS</span> : Configuration de <strong>Let's Encrypt</strong> pour le chiffrement des communications.</li>
+                    <li><span class="tech-badge">Durcissement du Serveur</span> : Configuration du firewall (UFW) pour n'autoriser que les ports essentiels (25, 465, 587, 80, 443, etc.).</li>
+                </ul>
+
+                <h3 class="subsection-heading">Focus sur la Sécurité des Emails (Délivrabilité)</h3>
+                <p class="section-content">
+                    La réussite de ce projet dépendait entièrement de la validation des mécanismes anti-spam par les grands fournisseurs (Gmail, Outlook).
+                </p>
+                <ul class="styled-list">
+                    <li><strong>SPF (Sender Policy Framework)</strong> : Enregistrement DNS pour lister les serveurs autorisés à envoyer des mails pour le domaine.</li>
+                    <li><strong>DKIM (DomainKeys Identified Mail)</strong> : Signature cryptographique des emails pour garantir qu'ils n'ont pas été altérés.</li>
+                    <li><strong>DMARC (Domain-based Message Authentication, Reporting, and Conformance)</strong> : Politique globale pour indiquer aux récepteurs comment traiter les emails non validés.</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section id="results" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">3. Validation & Compétences Acquises</h2>
+                <p class="section-content">
+                    Le serveur de mail est désormais pleinement opérationnel, capable d'envoyer et de recevoir des emails de manière fiable et sécurisée.
+                </p>
+
+                <h3 class="subsection-heading">Bénéfices Techniques Confirmés</h3>
+                <ul class="styled-list results-list">
+                    <li><strong>Sécurité des Services Publics</strong> : Maîtrise de l'ensemble des mécanismes (SPF, DKIM, DMARC) requis pour la bonne réputation d'un serveur.</li>
+                    <li><strong>Administration Systèmes</strong> : Capacité à déployer et maintenir une stack de services critiques sous Linux.</li>
+                    <li><strong>Ingénierie DNS Avancée</strong> : Expertise dans la configuration des enregistrements DNS complexes et des zones de domaine.</li>
+                    <li><strong>Indépendance Technique</strong> : Démontre la capacité à auto-héberger des services vitaux.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Leçons Apprises</h3>
+                <p>
+                    Le principal challenge résidait dans le <strong>déblocage des flux SMTP (port 25)</strong>, souvent filtrés par les fournisseurs de services, un obstacle typique des auto-hébergements. J'ai renforcé ma compréhension du rôle de chaque enregistrement DNS dans la chaîne de sécurité des communications.                </p>
+            </div>
+        </section>
+
+        <section id="next-project-cta" class="cta-section scroll-reveal">
+            <div class="container">
+                <a href="projects.html" class="btn btn-secondary hover-effect">← Retour à la liste des projets</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-links">
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
+            </p>
+            <p class="footer-copyright">
+                © 2025 Pape Birame Fall. Design & Code : Développeur R&T.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script>
+</body>
+</html>

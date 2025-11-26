@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Pape Birame Fall</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-fixed bg-light-transparent">
+        <div class="container header-content">
+            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="skills.html" class="nav-link">Compétences</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact-header" class="header-section scroll-reveal">
+            <div class="container-narrow">
+                <h1 class="page-title">Me Contacter</h1>
+                <p class="page-description">
+                    Recruteurs, collaborateurs potentiels ou curieux, n'hésitez pas à me contacter. Je suis toujours ouvert aux discussions sur les réseaux et les télécoms.
+                </p>
+            </div>
+        </section>
+
+        <section id="social-links" class="links-section scroll-reveal delay-1">
+            <div class="container grid-links">
+                
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" class="contact-card hover-lift linkedin-bg">
+                    <span class="card-icon">🔗</span>
+                    <h3 class="card-title">LinkedIn</h3>
+                    <p class="card-subtitle">Profil professionnel</p>
+                </a>
+
+                <a href="https://github.com/pape-21" target="_blank" class="contact-card hover-lift github-bg">
+                    <span class="card-icon">💾</span>
+                    <h3 class="card-title">GitHub</h3>
+                    <p class="card-subtitle">Mes dépôts de code</p>
+                </a>
+
+                <a href="mailto:contact@birame-fall.fr" class="contact-card hover-lift email-bg">
+                    <span class="card-icon">📧</span>
+                    <h3 class="card-title">Email Direct</h3>
+                    <p class="card-subtitle">Mon adresse personnelle</p>
+                </a>
+
+                <a href="fichiers/CV_PAPE_BIRAME_FALL_ALTERNANCE.pdf" download class="contact-card hover-lift accent-bg cta-download">
+                    <span class="card-icon">⬇️</span>
+                    <h3 class="card-title">Voir mon CV</h3>
+                    <p class="card-subtitle">Version PDF</p>
+                </a>
+            </div>
+        </section>
+
+       <section id="contact-form" class="form-section scroll-reveal delay-2 bg-secondary">
+    <div class="container-narrow">
+        <h2 class="section-heading">Envoyer un Message Rapide</h2>
+        
+        <form action="https://formspree.io/f/mrbdaaqv" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nom / Société</label>
+                <input type="text" id="name" name="name" required> 
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="message">Votre Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit" class="btn btn-submit btn-primary hover-effect">
+                    Envoyer
+                </button>
+            </div>
+            
+            <input type="text" name="_gotcha" style="display:none"> 
+            
+        </form>
+    </div>
+</section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-links">
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
+            </p>
+            <p class="footer-copyright">
+                © 2025 Pape Birame Fall. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script> 
+</body>
+</html>

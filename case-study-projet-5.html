@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE Portfolio : Conception d'un site web | Étude de Cas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-fixed bg-light-transparent">
+        <div class="container header-content">
+            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="skills.html" class="nav-link">Compétences</a>
+                <a href="projects.html" class="nav-link active">Projets</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="case-study-header" class="study-header scroll-reveal">
+            <div class="container-narrow">
+                <h1 class="page-title">SAE Portfolio : Conception et Développement d'un Site Web Professionnel</h1>
+
+                <p class="study-summary page-description">
+                    Conception et développement complet de ce site portfolio (actuellement consulté), visant à présenter mes compétences techniques, mes projets académiques (SAE) et mon profil professionnel d'étudiant en Réseaux et Télécommunications.
+                </p>
+
+                <div class="meta-tags">
+                    <span class="tag tag-role tag-tech accent-color">Rôle: Développeur Frontend & UX Designer</span>
+                    <span class="tag tag-date tag-tech">Date: Novembre - Décembre 2024</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-visual scroll-reveal delay-1">
+            <div class="container">
+                <figure>
+                    <img src="./images/portfolio-mockup.png" alt="Vue d'ensemble de la conception du portfolio web" class="full-width-image">
+                    <figcaption class="caption">Vue globale de l'interface du portfolio (Accueil et navigation) avec un focus sur l'esthétique "Dark Mode / Néon".</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="problem" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">1. Le Défi : Synthétiser son Parcours Technique</h2>
+                <p class="section-content">
+                    L'objectif principal était de fournir un outil de communication efficace et esthétique pour les recruteurs, capable de synthétiser de manière claire et visuelle un profil technique polyvalent (Réseaux, Systèmes, Scripting, Dev Web). Le design devait refléter le domaine des Télécoms et de l'IT.
+                </p>
+                <h3 class="subsection-heading">Objectifs de Conception et de Développement</h3>
+                <ul class="styled-list objectives-list">
+                    <li><strong>Design Technique</strong> : Créer une identité graphique (palette de couleurs, typographie) évoquant l'univers de la fibre optique et des consoles (style **Dark Mode/Néon**).</li>
+                    <li><strong>Responsivité (Mobile-First)</strong> : Assurer une consultation optimale sur tous les appareils (PC, tablette, mobile).</li>
+                    <li><strong>Structure Clé</strong> : Organiser le contenu en sections distinctes : Accueil, Compétences détaillées, Projets (études de cas), et Contact.</li>
+                    <li><strong>UX/Accessibilité</strong> : Implémenter des animations de défilement (Scroll Reveal) et une navigation claire pour une expérience utilisateur fluide.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solution" class="study-section scroll-reveal">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">2. La Solution Technique & Mise en Œuvre Frontend</h2>
+
+                <p class="section-content">
+                    Ce portfolio est une application Web statique, développée de manière artisanale sans l'aide de frameworks lourds (type React ou Vue.js), afin de démontrer une maîtrise complète du *vanilla* HTML et CSS.
+                </p>
+
+                <h3 class="subsection-heading">Technologies et Techniques Utilisées</h3>
+                <ul class="tech-list">
+                    <li><span class="tech-badge">HTML5</span> : Structure sémantique du contenu (Header, Main, Section, Article).</li>
+                    <li><span class="tech-badge">CSS3 & SASS (Potentiel)</span> : Styles avancés, implémentation du **Glassmorphism** (effet de verre flou) et des variables CSS (`:root`).</li>
+                    <li><span class="tech-badge">JavaScript (Vanilla)</span> : Gestion des événements simples et implémentation des animations au défilement (Scroll Reveal).</li>
+                    <li><span class="tag tag-tech accent-color">Responsive Design</span> : Utilisation intensive des <strong>Media Queries</strong> et de <strong>Flexbox/Grid</strong> pour l'adaptation à la taille de l'écran.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Focus sur l'Implémentation du Design</h3>
+                <p class="section-content">
+                    Le design a été piloté par les contraintes d'une identité sombre et technique. La police <strong>'Inter'</strong> a été choisie pour sa clarté, et la couleur d'accentuation <strong>Cyan Électrique</strong> (`--color-accent: #00E5FF;`) a été utilisée pour les liens actifs et les effets d'ombre brillante (<strong>Néon</strong>).
+                </p>
+                
+                <h3 class="subsection-heading">Extrait CSS des Variables Clés</h3>
+                <pre class="code-block"><code>
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    min-height: 100vh;
+    
+    /* --- L'IMAGE DE FOND 
+    background-image: url('../assets/images/background.jpg'); 
+    
+    background-color: #050505; 
+    background-size: cover;       
+    background-position: center;  
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+}
+
+                </code></pre>
+
+            </div>
+        </section>
+
+        <section id="results" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">3. Validation & Compétences Acquises</h2>
+                <p class="section-content">
+                    Ce portfolio est le livrable final d'une démarche de conception complète. Il sert désormais de plateforme centralisée pour toutes mes démarches de stage et de recrutement.
+                </p>
+
+                <h3 class="subsection-heading">Bénéfices Techniques Confirmés</h3>
+                <ul class="styled-list results-list">
+                    <li><strong>Maîtrise Frontend</strong> : Capacité à transformer une maquette graphique en code HTML/CSS fonctionnel et maintenable.</li>
+                    <li><strong>Design Centré Utilisateur</strong> : Application de principes d'UX pour garantir la lisibilité (contrastes forts, hiérarchie visuelle claire).</li>
+                    <li><strong>Projet Global</strong> : Ce portfolio intègre et catégorise l'ensemble des autres projets académiques, démontrant une vision globale de mon parcours.</li>
+                    <li><strong>Gestion de la Qualité</strong> : Assurance de la performance et de la compatibilité sur les différents navigateurs et supports.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Leçons Apprises</h3>
+                <p>
+                    La gestion de l'état "actif" et du filtre des projets a été un point d'apprentissage clé en JavaScript. J'ai aussi appris l'importance d'optimiser les images et le code pour garantir un temps de chargement minimal, indispensable pour un site professionnel.
+                </p>
+            </div>
+        </section>
+
+        <section id="next-project-cta" class="cta-section scroll-reveal">
+            <div class="container">
+                <a href="projects.html" class="btn btn-secondary hover-effect">← Retour à la liste des projets</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-links">
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
+            </p>
+            <p class="footer-copyright">
+                © 2025 Pape Birame Fall. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script>
+</body>
+</html>

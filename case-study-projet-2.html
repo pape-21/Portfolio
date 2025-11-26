@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traitement et Analyse de Données Web | Étude de Cas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-fixed bg-light-transparent">
+        <div class="container header-content">
+            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="skills.html" class="nav-link">Compétences</a>
+                <a href="projects.html" class="nav-link active">Projets</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="case-study-header" class="study-header scroll-reveal">
+            <div class="container-narrow">
+                <h1 class="page-title">SAE : Traitement et Analyse de Données Web (Apache Logs)</h1>
+
+                <p class="study-summary page-description">
+                    Développement d'un script Python automatisé pour l'extraction de statistiques de connexion à partir de fichiers de log Apache, la visualisation des données (Matplotlib) et la publication des résultats sur une page Web statique.
+                </p>
+
+                <div class="meta-tags">
+                    <span class="tag tag-role tag-tech accent-color">Rôle: Développeur Python / Data Analyst Junior</span>
+                    <span class="tag tag-date tag-tech">Date: Octobre 2024 - Janvier 2025</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-visual scroll-reveal delay-1">
+            <div class="container">
+                <figure>
+                    <img src="./images/histo_sem.png" alt="Exemple de graphique généré par Python" class="full-width-image">
+                    <figcaption class="caption">Exemple de visualisation générée par Python/Matplotlib (répartition des connexions par type de navigateur).</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="problem" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">1. Le Défi de l'Analyse des Logs Serveur</h2>
+                <p class="section-content">
+                    L'objectif était de transformer des fichiers de log Apache bruts et volumineux en indicateurs de performance clés (KPI) lisibles, afin de comprendre les habitudes de connexion et l'activité du serveur. La solution devait être entièrement automatisée et reproductible.
+                </p>
+                <h3 class="subsection-heading">Objectifs Clés du Scripting</h3>
+                <ul class="styled-list objectives-list">
+                    <li><strong>Extraction et Traitement</strong> : Lire et filtrer les données pertinentes des fichiers de log d'accès.</li>
+                    <li><strong>Visualisation (Data Viz)</strong> : Calculer et représenter graphiquement :
+                        <ul>
+                            <li>La répartition des navigateurs (camembert).</li>
+                            <li>L'histogramme des connexions par jour (semaine et mois).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Automatisation Complète</strong> : Gérer l'exécution via des arguments en ligne de commande (fichiers sources, répertoire de sortie).</li>
+                    <li><strong>Qualité du Code</strong> : Assurer le respect des standards de programmation Python, incluant les tests unitaires et la documentation (Sphinx).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="solution" class="study-section scroll-reveal">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">2. La Solution Technique : Scripting Python</h2>
+
+                <p class="section-content">
+                    J'ai développé un package Python modulaire suivant la structure stricte imposée par le cahier des charges. La logique métier (lecture, calcul, plotting) a été isolée dans différents modules pour faciliter les tests unitaires.
+                </p>
+
+                <h3 class="subsection-heading">Technologies et Méthodologie</h3>
+                <ul class="tech-list">
+                    <li><span class="tech-badge">Python 3.7+</span> : Langage principal pour le parsing de fichiers.</li>
+                    <li><span class="tech-badge">Matplotlib</span> : Librairie utilisée pour générer les graphiques (`.png`).</li>
+                    <li><span class="tech-badge">Unit Testing</span> : Création d'un répertoire `tests/` pour valider la robustesse de chaque fonction de parsing et de calcul.</li>
+                    <li><span class="tech-badge">Git & Arborescence</span> : Versionnement des codes sources et respect d'une arborescence de projet standard (`data/`, `docs/`, `nomprojet/`).</li>
+                </ul>
+
+                <h3 class="subsection-heading">Architecture du Code et Exécution</h3>
+                <p class="section-content">
+                    Le programme principal (`nom_projet.py`) gère les arguments via le module `argparse`. Après traitement, les images générées par Matplotlib et le fichier HTML/CSS de présentation sont stockés dans le répertoire de sortie.
+                </p>
+
+                <h3 class="subsection-heading">Extrait de la Commande d'Exécution</h3>
+                <pre class="code-block"><code>
+python3 statistiques-connexions-apache/main.py -p data/access.laii.log.8 data/access.laii.log.9 -d /home/papito/Documents/                </code></pre>
+            </div>
+        </section>
+
+        <section id="results" class="study-section scroll-reveal bg-secondary">
+            <div class="container-narrow">
+                <h2 class="section-heading accent-color">3. Résultats et Compétences Acquises</h2>
+                <p class="section-content">
+                    Le projet a été validé par la démonstration d'un script fonctionnel, de tests unitaires passant avec succès, et d'une documentation technique complète générée avec Sphinx.
+                </p>
+
+                <h3 class="subsection-heading">Acquis et Livrables Clés</h3>
+                <ul class="styled-list results-list">
+                    <li><strong>Automatisation (Python)</strong> : Capacité à écrire un programme complet, modulaire et gérant des I/O complexes (fichiers logs, arguments CLI).</li>
+                    <li><strong>Data Visualization</strong> : Maîtrise de la librairie Matplotlib pour transformer des données brutes en indicateurs visuels (camembert, histogrammes).</li>
+                    <li><strong>Qualité et Documentation</strong> : Respect strict du cycle de vie du logiciel (tests unitaires) et production de documentation technique professionnelle (reStructuredText, docstrings).</li>
+                    <li><strong>Gestion de Projet</strong> : Application concrète de la planification (Gantt) et du versionnement (Git) sur un projet de développement.</li>
+                </ul>
+
+                <h3 class="subsection-heading">Leçons Apprises</h3>
+                <p>
+                    Le principal challenge technique a été le parsing efficace de formats de log variables et l'agrégation des données temporelles (jours, semaines) sans surcharger la mémoire. J'ai renforcé ma compréhension des structures de données Python optimisées pour le traitement de gros volumes.
+                </p>
+            </div>
+        </section>
+
+        <section id="next-project-cta" class="cta-section scroll-reveal">
+            <div class="container">
+                <a href="projects.html" class="btn btn-secondary hover-effect">← Retour à la liste des projets</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="footer-links">
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
+            </p>
+            <p class="footer-copyright">
+                © 2025 Pape Birame Fall. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script>
+</body>
+</html>
