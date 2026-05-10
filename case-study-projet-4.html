@@ -3,36 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaînes de Transmission Numérique | Étude de Cas</title>
+    <title>TP R305 : Chaînes de Transmission Numérique | Pape Birame Fall</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="header-fixed bg-light-transparent">
-        <div class="container header-content">
-            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Accueil</a>
-                <a href="skills.html" class="nav-link">Compétences</a>
-                <a href="projects.html" class="nav-link active">Projets</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
-        </div>
+    <header class="header-fixed" id="header">
+        <div class="header-prompt"><span class="h-user">pape</span><span class="h-at">@</span><span class="h-host">birame-fall</span><span class="h-sep">:</span><span class="h-path">~/projets/04</span><span class="h-dollar">$</span></div>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">accueil</a>
+            <a href="skills.html" class="nav-link">compétences</a>
+            <a href="projects.html" class="nav-link active">projets</a>
+            <a href="contact.html" class="nav-link">contact</a>
+        </nav>
     </header>
-
     <main>
-        <section id="case-study-header" class="study-header scroll-reveal">
+        <section class="study-header scroll-reveal">
             <div class="container-narrow">
                 <h1 class="page-title">TP R305 : Analyse et Simulation des Chaînes de Transmission Numérique</h1>
-
-                <p class="study-summary page-description">
-                    Étude pratique et simulation des fondements de la transmission numérique, incluant l'analyse spectrale des signaux modulés, la quantification des performances (BER/RSB), et la modélisation d'une chaîne émetteur-récepteur sous GNU Radio.
-                </p>
-
+                <p class="page-description">Étude pratique des fondements de la transmission numérique — analyse spectrale, BER/RSB, codage en ligne et simulation d'une chaîne émetteur-récepteur sous GNU Radio.</p>
                 <div class="meta-tags">
-                    <span class="tag tag-role tag-tech accent-color">Rôle: Ingénieur Signaux Junior / Télécoms</span>
-                    <span class="tag tag-date tag-tech">Date: Septembre - Décembre 2025</span>
+                    <span class="tag">Rôle : Ingénieur Signaux Junior</span>
+                    <span class="tag">Sept – Déc 2025</span>
+                    <span class="tag">GNU Radio / SDR</span>
                 </div>
             </div>
         </section>
@@ -41,93 +35,69 @@
             <div class="container">
                 <figure>
                     <img src="./images/diagramme.png" alt="Diagramme de l'œil" class="full-width-image">
-                    <figcaption class="caption">Exemple de visualisation de la qualité d'une liaison numérique : le diagramme de l'œil.</figcaption>
+                    <figcaption class="caption">Diagramme de l'œil — visualisation de la qualité d'une liaison numérique et de l'Interférence Inter-Symbole (IIS).</figcaption>
                 </figure>
             </div>
         </section>
 
-        <section id="problem" class="study-section scroll-reveal bg-secondary">
+        <section class="study-section scroll-reveal">
             <div class="container-narrow">
-                <h2 class="section-heading accent-color">1. Le Défi de l'Optimisation des Liaisons Radiofréquences</h2>
-                <p class="section-content">
-                    L'objectif de cette série de TPs était d'assurer la maîtrise des principes régissant la qualité et l'efficacité spectrale d'une communication. Cela impliquait d'analyser l'impact des choix techniques (modulations, codage) et des perturbations physiques (bruit, synchronisation) sur la fiabilité de la transmission.
-                </p>
-                <h3 class="subsection-heading">Objectifs Pédagogiques Clés</h3>
+                <h2 class="section-heading">1. Le Défi — Ce qui se passe vraiment dans le canal</h2>
+                <p class="section-content">On a simulé une chaîne de transmission complète et on l'a mesurée en conditions réelles. Le but : comprendre pourquoi certains bits arrivent corrompus — et comment les choix de modulation ou de codage changent tout.</p>
+                <h3 class="subsection-heading">Objectifs Pédagogiques</h3>
                 <ul class="styled-list objectives-list">
-                    <li><strong>Analyse Spectrale</strong> : Maîtriser l'utilisation de l'Analyseur de Spectre pour interpréter les signaux RF (Fréquence, Puissance, Largeur de bande).</li>
-                    <li><strong>Performance du Canal</strong> : Comprendre l'impact du <strong>Bruit</strong> et du <strong>Rapport Signal sur Bruit (RSB)</strong> sur le <strong>Taux d'Erreur Binaire (TEB/BER)</strong>.</li>
-                    <li><strong>Codage en Ligne</strong> : Étudier les codes en ligne (NRZ, RZ, Manchester) et leurs propriétés spectrales.</li>
-                    <li><strong>Diagnostic de Qualité</strong> : Analyser le <strong>Diagramme de l'Œil</strong> pour évaluer l'effet des perturbations et l'Interférence Inter-Symbole (IIS).</li>
-                    <li><strong>Simulation Réelle</strong> : Simuler une chaîne de transmission complète (émetteur-récepteur) à l'aide de l'outil <strong>GNU Radio</strong>.</li>
+                    <li><strong>Analyse Spectrale</strong> — Utilisation de l'analyseur de spectre (RBW, VBW, Span).</li>
+                    <li><strong>BER/RSB</strong> — Comprendre l'impact du bruit sur le Taux d'Erreur Binaire.</li>
+                    <li><strong>Codage en Ligne</strong> — NRZ, RZ, Manchester et propriétés spectrales.</li>
+                    <li><strong>Diagramme de l'Œil</strong> — Diagnostic de la distorsion et de l'IIS.</li>
+                    <li><strong>GNU Radio</strong> — Simulation d'une chaîne complète émetteur-récepteur.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="solution" class="study-section scroll-reveal">
+        <section class="study-section bg-secondary scroll-reveal">
             <div class="container-narrow">
-                <h2 class="section-heading accent-color">2. La Solution Technique & Méthodologie</h2>
-
-                <p class="section-content">
-                    La démarche a combiné l'expérimentation sur du matériel de laboratoire spécialisé avec la modélisation logicielle, offrant une double validation des concepts.
-                </p>
-
-                <h3 class="subsection-heading">Phase 1 : Mesures physiques et Instrumentation</h3>
+                <h2 class="section-heading">2. La Solution Technique</h2>
+                <h3 class="subsection-heading">Phase 1 — Mesures Physiques</h3>
                 <ul class="tech-list">
-                    <li><span class="tech-badge">Analyseur de Spectre</span> : Réglage (RBW, VBW, Span) et lecture des spectres de signaux modulés (ASK, FSK).</li>
-                    <li><span class="tech-badge">Oscilloscope</span> : Observation des signaux temporels et du Diagramme de l'Œil pour quantifier la distorsion.</li>
-                    <li><span class="tech-badge">Générateur de Taux d'Erreur</span> : Mesure directe du <strong>TEB</strong> en fonction de l'atténuation et du bruit injecté.</li>
+                    <li><span class="tech-badge">Analyseur de Spectre</span> — Lecture de spectres ASK, FSK.</li>
+                    <li><span class="tech-badge">Oscilloscope</span> — Signaux temporels et diagramme de l'œil.</li>
+                    <li><span class="tech-badge">Générateur TEB</span> — Mesure du BER en fonction de l'atténuation.</li>
                 </ul>
-
-                <h3 class="subsection-heading">Phase 2 : Simulation GNU Radio</h3>
+                <h3 class="subsection-heading">Phase 2 — Simulation GNU Radio</h3>
                 <ul class="tech-list">
-                    <li><span class="tech-badge">GNU Radio</span> : Conception de *flowgraphs* pour simuler une chaîne de communication numérique.</li>
-                    <li><span class="tech-badge">Modélisation de Canal</span> : Intégration de blocs de <strong>Bruit Additif Gaussien (BGA)</strong> pour simuler des conditions réelles.</li>
-                    <li><span class="tech-badge">USRP/SDR (Software Defined Radio)</span> : Mise en œuvre potentielle d'un émetteur-récepteur réel/simulé (TP 5-2).</li>
+                    <li><span class="tech-badge">GNU Radio</span> — Flowgraphs pour simuler une chaîne de communication.</li>
+                    <li><span class="tech-badge">Bruit Additif Gaussien (BGA)</span> — Simulation de conditions réelles de canal.</li>
+                    <li><span class="tech-badge">USRP/SDR</span> — Émetteur-récepteur Software Defined Radio.</li>
                 </ul>
-
             </div>
         </section>
 
-        <section id="results" class="study-section scroll-reveal bg-secondary">
+        <section class="study-section scroll-reveal">
             <div class="container-narrow">
-                <h2 class="section-heading accent-color">3. Validation & Compétences Acquises</h2>
-                <p class="section-content">
-                    La réussite des TPs a permis de valider une compréhension technique approfondie du fonctionnement interne des systèmes de communication sans fil, un atout majeur dans le domaine des Télécommunications.
-                </p>
-
-                <h3 class="subsection-heading">Bénéfices Techniques Confirmés</h3>
+                <h2 class="section-heading">3. Résultats &amp; Compétences</h2>
                 <ul class="styled-list results-list">
-                    <li><strong>Analyse Spectrale Avancée</strong> : Capacité à analyser et interpréter le comportement fréquentiel d'un signal, essentiel pour l'allocation de ressources et la conformité réglementaire.</li>
-                    <li><strong>Évaluation de la Qualité</strong> : Maîtrise des concepts de TEB et RSB pour dimensionner une liaison radio et garantir une qualité de service (QoS) minimale.</li>
-                    <li><strong>Ingénierie des Signaux</strong> : Compréhension de la relation entre les codes en ligne, l'occupation spectrale et la synchronisation.</li>
-                    <li><strong>Compétences SDR/GNU Radio</strong> : Capacité à prototyper et débugger des chaînes de communication de manière logicielle, compétence clé pour l'innovation en R&D Télécom.</li>
+                    <li><strong>Lecture spectrale</strong> — Je lis un spectre ASK ou FSK sur analyseur et je comprends ce que je vois, pas juste ce que je mesure.</li>
+                    <li><strong>BER vs RSB</strong> — La relation entre rapport signal/bruit et taux d'erreur : maintenant c'est concret, pas juste une formule de cours.</li>
+                    <li><strong>Codages en ligne</strong> — NRZ, Manchester, RZ : chacun a son empreinte spectrale. Choisir le bon, ça s'apprend sur oscilloscope.</li>
+                    <li><strong>GNU Radio</strong> — Simuler une chaîne émetteur-récepteur complète depuis un flowgraph — un outil que je garde.</li>
                 </ul>
-
-                <h3 class="subsection-heading">Leçons Apprises</h3>
-                <p>
-                    J'ai appris à passer de la théorie (équations mathématiques des modulations) à la pratique (lecture des spectres réels) et à la simulation. L'interprétation du Diagramme de l'Œil s'est avérée être un outil puissant de diagnostic pour identifier les problèmes de filtrage et de dispersion dans le canal.
-                </p>
+                <p class="section-content">Le diagramme de l'œil, c'est une de ces choses qu'on comprend vraiment qu'en le voyant sur un vrai oscilloscope. Sur papier, c'est abstrait. Face à un signal dégradé, ça devient évident.</p>
             </div>
         </section>
 
-        <section id="next-project-cta" class="cta-section scroll-reveal">
-            <div class="container">
-                <a href="projects.html" class="btn btn-secondary hover-effect">← Retour à la liste des projets</a>
-            </div>
+        <section class="cta-section scroll-reveal" style="padding:48px 32px;">
+            <a href="projects.html" class="btn btn-secondary">← ls projets/</a>
         </section>
     </main>
-
     <footer class="main-footer">
-        <div class="container">
-            <p class="footer-links">
-                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
-            </p>
-            <p class="footer-copyright">
-                © 2025 Pape Birame Fall. Tous droits réservés.
-            </p>
+        <p class="footer-copyright">© 2025 Pape Birame Fall</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/pape-birame-fall" target="_blank">LinkedIn</a>
+            <a href="https://github.com/pape-21" target="_blank">GitHub</a>
+            <a href="mailto:contact@birame-fall.fr">Email</a>
         </div>
     </footer>
-
     <script src="js/animations.js"></script>
 </body>
 </html>

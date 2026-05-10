@@ -3,164 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil | Pape Birame Fall </title>
+    <title>Pape Birame Fall — Réseaux & Télécommunications</title>
+    <meta name="description" content="Portfolio de Pape Birame Fall, étudiant en BUT Réseaux & Télécommunications.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header-fixed bg-light-transparent">
-        <div class="container header-content">
-            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-link active">Accueil</a>
-                <a href="skills.html" class="nav-link">Compétences</a>
-                <a href="projects.html" class="nav-link">Projets</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
+    <header id="header">
+        <div class="header-prompt">
+            <span class="h-user">pape</span><span class="h-at">@</span><span class="h-host">birame-fall</span><span class="h-sep">:</span><span class="h-path">~/portfolio</span><span class="h-dollar">$</span>
+            <span id="header-cmd" style="color:var(--text);margin-left:4px;">_</span>
         </div>
+        <nav>
+            <a href="index.html" class="active">accueil</a>
+            <a href="skills.html">compétences</a>
+            <a href="projects.html">projets</a>
+            <a href="contact.html">contact</a>
+        </nav>
     </header>
 
     <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <h1 class="hero-title reveal-text">
-                    Passioné des systémes réseaux et Télécoms
-                </h1>
-                <p class="hero-subtitle reveal-text delay-1">
-                    Pape Birame Fall - Etudiant en BUT2 Réseaux et Télécommunications.
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-left">
+                <p class="hero-tag reveal">BUT Réseaux &amp; Télécommunications</p>
+                <h1 class="hero-name reveal">Pape<br>Birame Fall</h1>
+                <p class="hero-title reveal">Ingénieur en devenir —<br><strong>Réseaux, Sécurité &amp; Télécom</strong></p>
+                <p class="hero-desc reveal">
+                    // Je construis des réseaux, je les sécurise<br>
+                    // et je les automatise quand c'est possible.<br>
+                    // En recherche d'alternance.
                 </p>
-                <a href="projects.html" class="btn btn-primary reveal-element delay-2 hover-effect">
-                    Voir mes Projets
-                </a>
+                <div class="hero-actions reveal">
+                    <a href="projects.html" class="btn btn-primary">voir_projets.sh</a>
+                    <a href="fichiers/CV_PAPE_BIRAME_FALL_ALTERNANCE.pdf" class="btn btn-secondary" target="_blank">download cv.pdf</a>
+                </div>
+            </div>
+
+            <div class="term-window reveal" style="align-self:center;">
+                <div class="term-bar">
+                    <div class="term-dot red"></div>
+                    <div class="term-dot yellow"></div>
+                    <div class="term-dot green"></div>
+                    <span class="term-title">profil.json — bash</span>
+                </div>
+                <div class="term-body">
+                    <div class="t-comment"># whoami</div>
+                    <div class="t-prompt">cat profil.json</div>
+                    <div class="t-out">{</div>
+                    <div class="t-out">&nbsp;&nbsp;<span class="t-key">"nom"</span>: <span class="t-str">"Pape Birame Fall"</span>,</div>
+                    <div class="t-out">&nbsp;&nbsp;<span class="t-key">"formation"</span>: <span class="t-str">"BUT R&amp;T — Année 2"</span>,</div>
+                    <div class="t-out">&nbsp;&nbsp;<span class="t-key">"spécialités"</span>: [</div>
+                    <div class="t-out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Infrastructure Cisco"</span>,</div>
+                    <div class="t-out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Cybersécurité"</span>,</div>
+                    <div class="t-out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"ToIP / Asterisk"</span>,</div>
+                    <div class="t-out">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Linux / Python / Bash"</span></div>
+                    <div class="t-out">&nbsp;&nbsp;],</div>
+                    <div class="t-out">&nbsp;&nbsp;<span class="t-key">"disponible"</span>: <span class="t-val">true</span>,</div>
+                    <div class="t-out">&nbsp;&nbsp;<span class="t-key">"contrat"</span>: <span class="t-str">"Alternance"</span>,</div>
+                    <div class="t-out">&nbsp;&nbsp;<span class="t-key">"contact"</span>: <span class="t-str">"contact@birame-fall.fr"</span></div>
+                    <div class="t-out">}</div>
+                    <div style="padding-left:0;color:var(--accent);">$ <span class="blink"></span></div>
+                </div>
             </div>
         </section>
 
-        <section id="but-rt" class="but-rt-section scroll-reveal">
-            <div class="container">
-                <h2 class="section-title">Ma Formation : BUT Réseaux et Télécoms</h2>
-
-<div class="carousel-container">
-    <div class="carousel-item">
-        <span class="icon">🔗</span>
-        <h3 class="item-title">Infras Cisco</h3>
-        <p class="item-description">
-            Switching L2/L3, protocoles de haute disponibilité (HSRP, Etherchannel) et routage OSPF.
-        </p>
-    </div>
-
-    <div class="carousel-item">
-        <span class="icon">🛡️</span>
-        <h3 class="item-title">Cybersécurité</h3>
-        <p class="item-description">
-            Déploiement de Firewall Stormshield, configuration de règles de filtrage, NAT et PAT.
-        </p>
-    </div>
-
-     <div class="carousel-item">
-        <span class="icon">📡</span>
-        <h3 class="item-title">ToIP & Transmissions</h3>
-        <p class="item-description">
-            Serveurs Asterisk (IPBX), analyse de signaux (Modulation) et infrastructures mobiles 4G/GSM.
-        </p>
-    </div>
-
-    <div class="carousel-item">
-        <span class="icon">💻</span>
-        <h3 class="item-title">Dev & Scripting</h3>
-        <p class="item-description">
-            Automatisation Linux (Bash), développement Python 3 (QT5) et solutions Web (PHP/SQL).
-        </p>
-    </div>
-</div>
-
-        <section id="projects-preview" class="projects-preview-section scroll-reveal">
-            <div class="container">
-                <h2 class="section-title">Quelques Réalisations Clés</h2>
-
- <div class="projects-grid">
-    
-    <article class="project-card hover-lift">
-        <a href="case-study-projet-1.html" class="project-link">
-            <div class="project-image-placeholder">
-                🏢 Topologie GNS3
+        <!-- STATS -->
+        <div class="stats-bar">
+            <div class="stat-item reveal">
+                <div class="stat-number">7<span>+</span></div>
+                <div class="stat-label">Projets réalisés</div>
             </div>
-            <h3 class="project-name">Construire un réseaux informatique pour une petite structure</h3>
-            <p class="project-tags">
-                <span class="tag-tech">GNS3</span>
-                <span class="tag-tech">OSPF</span>
-                <span class="tag-tech">DNS</span>
-                <span class="tag-tech">Apache</span>
-                <span class="tag-tech">DHCP</span>
-                <span class="tag-tech">NAT</span>
-                <span class="tag-tech">PAT</span>
-                <span class="tag-tech">VLANs</span>
-            </p>
-            <span class="read-more">Voir l'étude de cas →</span>
-        </a>
-    </article>
-
-    <article class="project-card hover-lift">
-        <a href="case-study-projet-6.html" class="project-link">
-            <div class="project-image-placeholder">
-                📞 Serveur ToIP
+            <div class="stat-item reveal reveal-delay-1">
+                <div class="stat-number">2<span>ans</span></div>
+                <div class="stat-label">BUT R&amp;T</div>
             </div>
-            <h3 class="project-name">Déploiement d'une Solution de Téléphonie IP</h3>
-            <p class="project-tags">
-                <span class="tag-tech">Asterisk</span>
-                <span class="tag-tech">SIP/RTP</span>
-                <span class="tag-tech">WebRTC</span>
-                <span class="tag-tech">Trunk SIP</span>
-                <span class="tag-tech">MySQL</span>
-                <span class="tag-tech">Wireshark</span>
-            </p>
-            <span class="read-more">Voir l'étude de cas →</span>
-        </a>
-    </article>
-
-    <article class="project-card hover-lift">
-        <a href="case-study-projet-5.html" class="project-link">
-            <div class="project-image-placeholder">
-                🐍 Serveur Web
+            <div class="stat-item reveal reveal-delay-2">
+                <div class="stat-number">4<span>+</span></div>
+                <div class="stat-label">Domaines couverts</div>
             </div>
-            <h3 class="project-name">Portfolio</h3>
-            <p class="project-tags">
-                <span class="tag-tech">HTML5</span>
-                <span class="tag-tech">CSS3</span>
-                <span class="tag-tech">JavaScript</span>
-            </p>
-            <span class="read-more">Voir l'étude de cas →</span>
-        </a>
-    </article>
+            <div class="stat-item reveal reveal-delay-3">
+                <div class="stat-number">1<span>x</span></div>
+                <div class="stat-label">En recherche d'alternance</div>
+            </div>
+        </div>
 
-</div>
-                <a href="projects.html" class="btn btn-secondary reveal-element hover-effect">
-                    Voir Tous les Projets 
-                </a>
+        <!-- FORMATION -->
+        <section style="padding:80px 48px;">
+            <div class="section-header reveal"><h2>formation</h2></div>
+            <div class="reveal" style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:960px;">
+                <div class="term-window">
+                    <div class="term-bar"><div class="term-dot green"></div><span class="term-title">infrastructures.sh</span></div>
+                    <div class="term-body">
+                        <div class="t-comment"># Réseaux Cisco</div>
+                        <div><span class="t-key">OSPF</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ maîtrisé</span></div>
+                        <div><span class="t-key">HSRP</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ configuré</span></div>
+                        <div><span class="t-key">VLANs</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ segmenté</span></div>
+                        <div><span class="t-key">Cisco IOS</span>&nbsp;&nbsp;&nbsp;<span class="t-val">✓ opérationnel</span></div>
+                    </div>
+                </div>
+                <div class="term-window">
+                    <div class="term-bar"><div class="term-dot green"></div><span class="term-title">security.sh</span></div>
+                    <div class="term-body">
+                        <div class="t-comment"># Cybersécurité</div>
+                        <div><span class="t-key">Stormshield</span>&nbsp;<span class="t-val">✓ déployé</span></div>
+                        <div><span class="t-key">VPN IPsec</span>&nbsp;&nbsp;&nbsp;<span class="t-val">✓ configuré</span></div>
+                        <div><span class="t-key">NAT/PAT</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ opérationnel</span></div>
+                        <div><span class="t-key">Wireshark</span>&nbsp;&nbsp;&nbsp;<span class="t-val">✓ analysé</span></div>
+                    </div>
+                </div>
+                <div class="term-window">
+                    <div class="term-bar"><div class="term-dot green"></div><span class="term-title">toip.sh</span></div>
+                    <div class="term-body">
+                        <div class="t-comment"># ToIP &amp; Transmissions</div>
+                        <div><span class="t-key">Asterisk</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ déployé</span></div>
+                        <div><span class="t-key">SIP/RTP</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ configuré</span></div>
+                        <div><span class="t-key">WebRTC</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ intégré</span></div>
+                        <div><span class="t-key">4G/GSM</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ étudié</span></div>
+                    </div>
+                </div>
+                <div class="term-window">
+                    <div class="term-bar"><div class="term-dot green"></div><span class="term-title">dev.sh</span></div>
+                    <div class="term-body">
+                        <div class="t-comment"># Dev &amp; Scripting</div>
+                        <div><span class="t-key">Python</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ maîtrisé</span></div>
+                        <div><span class="t-key">Bash</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ automatisé</span></div>
+                        <div><span class="t-key">PHP/SQL</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ développé</span></div>
+                        <div><span class="t-key">Linux</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-val">✓ administré</span></div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="cta-contact" class="cta-section scroll-reveal">
-            <div class="container">
-                <h2 class="section-title">Prêt à discuter Réseaux ?</h2>
-                <a href="contact.html" class="btn btn-primary btn-large hover-effect">
-                    Me Contacter Maintenant
+        <!-- PROJETS -->
+        <section style="background:var(--bg2);padding:80px 48px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+            <div class="section-header reveal"><h2>réalisations clés</h2></div>
+            <div class="projects-grid reveal" style="max-width:960px;">
+                <a href="case-study-projet-1.html" class="project-card">
+                    <div class="term-bar"><div class="term-dot red"></div><div class="term-dot yellow"></div><div class="term-dot green"></div><span class="term-title">projet-01 — réseaux</span></div>
+                    <div class="project-body">
+                        <h3 class="project-name">Réseau Informatique Multisites</h3>
+                        <p class="project-excerpt">Deux sites distants, un FAI simulé, du vrai Cisco IOS. OSPF, VLANs par département, NAT/PAT et services Linux déployés derrière.</p>
+                        <div class="project-tags"><span class="tag">GNS3</span><span class="tag">OSPF</span><span class="tag">VLANs</span><span class="tag">NAT/PAT</span></div>
+                        <span class="project-cta">voir l'étude de cas</span>
+                    </div>
+                </a>
+                <a href="case-study-projet-6.html" class="project-card">
+                    <div class="term-bar"><div class="term-dot red"></div><div class="term-dot yellow"></div><div class="term-dot green"></div><span class="term-title">projet-06 — toip</span></div>
+                    <div class="project-body">
+                        <h3 class="project-name">Téléphonie IP Multisites + IA</h3>
+                        <p class="project-excerpt">Faire parler Mitel, Asterisk et Freeswitch ensemble via Trunk SIP, puis brancher un assistant IA (STT → LLM → TTS) accessible depuis n'importe quel poste.</p>
+                        <div class="project-tags"><span class="tag">Asterisk</span><span class="tag">SIP/RTP</span><span class="tag">LLM</span><span class="tag">Grafana</span></div>
+                        <span class="project-cta">voir l'étude de cas</span>
+                    </div>
+                </a>
+                <a href="case-study-projet-7.html" class="project-card">
+                    <div class="term-bar"><div class="term-dot red"></div><div class="term-dot yellow"></div><div class="term-dot green"></div><span class="term-title">projet-07 — sécurité</span></div>
+                    <div class="project-body">
+                        <h3 class="project-name">Serveur Mail Sécurisé (MIAB)</h3>
+                        <p class="project-excerpt">Mon propre serveur mail, en prod depuis juin 2025. SPF, DKIM, DMARC bien calés — aucun mail ne finit en spam chez Gmail ou Outlook.</p>
+                        <div class="project-tags"><span class="tag">Linux</span><span class="tag">DNS</span><span class="tag">SPF/DKIM</span><span class="tag">TLS</span></div>
+                        <span class="project-cta">voir l'étude de cas</span>
+                    </div>
                 </a>
             </div>
+            <div style="margin-top:28px;" class="reveal">
+                <a href="projects.html" class="btn btn-secondary">ls projets/ --all</a>
+            </div>
         </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <h2 class="cta-title reveal">Prêt à discuter<br><em>Réseaux ?</em></h2>
+            <p class="cta-sub reveal">Disponible pour alternance · contact@birame-fall.fr</p>
+            <div class="reveal" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                <a href="contact.html" class="btn btn-primary">./contact.sh</a>
+                <a href="fichiers/CV_PAPE_BIRAME_FALL_ALTERNANCE.pdf" class="btn btn-secondary" target="_blank">download cv.pdf</a>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p class="footer-links">
-                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
-            </p>
-            <p class="footer-copyright">
-                © 2025 Pape Birame Fall. Tous droits réservés.
-            </p>
+    <footer>
+        <p class="footer-copy">© 2025 Pape Birame Fall</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/pape-birame-fall" target="_blank">LinkedIn</a>
+            <a href="https://github.com/pape-21" target="_blank">GitHub</a>
+            <a href="mailto:contact@birame-fall.fr">Email</a>
         </div>
     </footer>
 
-    <script src="js/animations.js"></script> 
+    <script>
+        const revels = document.querySelectorAll('.reveal');
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        revels.forEach(el => obs.observe(el));
+
+        window.addEventListener('scroll', () => {
+            document.getElementById('header').classList.toggle('scrolled', scrollY > 40);
+        });
+
+        const cmds = ['ls -la projets/', 'ping birame-fall.fr', 'ssh pape@infra-cisco', 'cat skills.json', 'nmap -sV 192.168.1.1', 'python3 analyse.py'];
+        let ci = 0, ti = 0, del = false;
+        const cmdEl = document.getElementById('header-cmd');
+        function typeLoop() {
+            const cmd = cmds[ci % cmds.length];
+            if (!del) {
+                cmdEl.textContent = cmd.slice(0, ++ti) + '█';
+                if (ti === cmd.length) { del = true; setTimeout(typeLoop, 1800); return; }
+            } else {
+                cmdEl.textContent = cmd.slice(0, --ti) + '█';
+                if (ti === 0) { del = false; ci++; }
+            }
+            setTimeout(typeLoop, del ? 38 : 72);
+        }
+        setTimeout(typeLoop, 1200);
+    </script>
+
 </body>
 </html>

@@ -4,151 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compétences | Pape Birame Fall</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header-fixed bg-light-transparent">
-        <div class="container header-content">
-            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Accueil</a>
-                <a href="skills.html" class="nav-link active">Compétences</a>
-                <a href="projects.html" class="nav-link">Projets</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
+    <header class="header-fixed" id="header">
+        <div class="header-prompt">
+            <span class="h-user">pape</span><span class="h-at">@</span><span class="h-host">birame-fall</span><span class="h-sep">:</span><span class="h-path">~/skills</span><span class="h-dollar">$</span>
         </div>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">accueil</a>
+            <a href="skills.html" class="nav-link active">compétences</a>
+            <a href="projects.html" class="nav-link">projets</a>
+            <a href="contact.html" class="nav-link">contact</a>
+        </nav>
     </header>
 
     <main>
-        <section id="skills-header" class="header-section scroll-reveal">
+
+        <section class="header-section scroll-reveal">
             <div class="container-narrow">
-                <h1 class="page-title">Mes Compétences Techniques et Humaines</h1>
+                <h1 class="page-title">Compétences Techniques</h1>
                 <p class="page-description">
-                    Mon expertise est organisée autour des fondamentaux de l'infrastructure, de la sécurité et de l'automatisation.
+                    Réseaux, systèmes, sécurité et scripting — tout ce que j'ai appris en BUT R&amp;T, je l'ai pratiqué sur des projets réels.
                 </p>
             </div>
         </section>
-        
-        <section id="hard-skills" class="skills-section">
+
+        <!-- HARD SKILLS -->
+        <section style="padding:60px 0;">
             <div class="container-wide">
-                <h2 class="section-heading accent-color scroll-reveal">Expertise Technique (Hard Skills)</h2>
+
+                <div class="section-header scroll-reveal"><h2>hard skills</h2></div>
 
                 <div class="skill-category-block scroll-reveal delay-1">
-                    <h3 class="category-title">🌐 Réseaux & Infrastructure</h3>
-                    <ul class="skills-list grid-columns">
-                        <li>Routage Statique & Dynamique (OSPF, RIP,...)</li>
-                        <li>Redondance et haute disponibilité (HSRP, VRRP, EtherChannel)</li>
-                        <li>Segmentation réseau et DMZ</li>
-                        <li>Gestion de serveurs DHCP, DNS, AD & DS</li>
+                    <h3 class="category-title">🌐 Réseaux &amp; Infrastructure</h3>
+                    <ul class="skills-list">
+                        <li>Routage statique &amp; dynamique (OSPF, RIP)</li>
+                        <li>Redondance et haute dispo (HSRP, VRRP, EtherChannel)</li>
+                        <li>Segmentation réseau, VLANs et DMZ</li>
+                        <li>Serveurs DHCP, DNS, AD &amp; DS</li>
                         <li>Virtualisation réseau (GNS3, Packet Tracer)</li>
                         <li>Réseaux d'accès XDSL</li>
                     </ul>
                 </div>
 
                 <div class="skill-category-block scroll-reveal delay-2">
-                    <h3 class="category-title">💻 Systèmes & Virtualisation</h3>
-                    <ul class="skills-list grid-columns">
-                        <li>Administration Linux (Debian)</li>
+                    <h3 class="category-title">💻 Systèmes &amp; Virtualisation</h3>
+                    <ul class="skills-list">
+                        <li>Administration Linux (Debian / Ubuntu Server)</li>
                         <li>Windows Server, Active Directory</li>
-                        <li>Virtualisation : VMware, VirtualBox</li>
-                        <li>Automatisation et déploiement (scripts Bash/Python)</li>
+                        <li>Virtualisation VMware, VirtualBox, Proxmox</li>
+                        <li>Automatisation et déploiement (Bash / Python)</li>
                         <li>Configuration réseau des VM et conteneurs</li>
-                        <li>Gestion de systèmes de fichiers (NFS, NTFS, EXT4,...)</li>
+                        <li>Gestion systèmes de fichiers (NFS, NTFS, EXT4)</li>
                     </ul>
                 </div>
+
                 <div class="skill-category-block scroll-reveal delay-2">
-                    <h3 class="category-title">📡 Télécommunications & Systèmes de Transmission</h3>
-                    <ul class="skills-list grid-columns">
-                        <li>Transmission analogique et numérique (modulation AM, FM, QAM, PSK)</li>
+                    <h3 class="category-title">📡 Télécommunications &amp; Transmission</h3>
+                    <ul class="skills-list">
+                        <li>Transmission analogique et numérique (AM, FM, QAM, PSK)</li>
                         <li>Réseau hertzien (liaisons radio)</li>
-                        <li>Fibre optique et cuivre (FTTx, câblage et connectique)</li>
-                        <li>Multiplexage </li>
+                        <li>Fibre optique et cuivre (FTTx, câblage)</li>
+                        <li>Multiplexage</li>
                         <li>Propagation et atténuation des signaux</li>
-                        <li>Mesures et diagnostic des lignes de transmission (oscilloscope, analyseur de spectre)</li>
+                        <li>Mesures et diagnostic (oscilloscope, analyseur de spectre)</li>
                     </ul>
                 </div>
 
                 <div class="skill-category-block scroll-reveal delay-3">
-                    <h3 class="category-title">⚙️ Programmation & Scripting</h3>
-                    <ul class="skills-list grid-columns">
-                        <li>Python (Scapy)</li>
-                        <li>Développement d’interfaces graphiques (Python/ PyQt)</li>
-                        <li>Manipulation de fichiers & automatisation système (Bash/Python)</li>
-                        <li>Développement Web : PHP (architecture MVC)</li>
-                        <li>Bases de données SQL (MySQL, PostgreSQL)</li>
+                    <h3 class="category-title">⚙️ Programmation &amp; Scripting</h3>
+                    <ul class="skills-list">
+                        <li>Python 3 (Scapy, Matplotlib, argparse)</li>
+                        <li>Interfaces graphiques (Python / PyQt5)</li>
+                        <li>Manipulation fichiers &amp; automatisation (Bash / Python)</li>
+                        <li>Développement Web PHP (architecture MVC)</li>
+                        <li>Bases de données SQL (MySQL, MariaDB, PostgreSQL)</li>
                         <li>HTML5 / CSS3 / JavaScript</li>
                         <li>Versioning avec Git / GitHub</li>
-                        <li>Scripts réseau (communication TCP, scans, sockets Python)</li>
-
+                        <li>Scripts réseau (TCP, scans, sockets Python)</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category-block scroll-reveal delay-4">
-                    <h3 class="category-title">🔒 Sécurité des Systèmes et Réseaux</h3>
-                    <ul class="skills-list grid-columns">
-                        <li>Configuration de Firewalls (Routage, filtrage, NAT)</li>
-                        <li>Réseaux Privés Virtuels (VPN IPsec)</li>
+                    <h3 class="category-title">🔒 Sécurité des Systèmes &amp; Réseaux</h3>
+                    <ul class="skills-list">
+                        <li>Configuration Firewalls (filtrage, NAT, Stormshield)</li>
+                        <li>VPN IPsec — configuration et dépannage</li>
                         <li>Surveillance et gestion des vulnérabilités</li>
-                        <li>Authentification forte (PHP, via SQL)</li>
-                        <li>Serveur de messagerie et annuaire LDAP (Postfix/Dovecot, OpenLDAP, Active Directory)</li>
-                        <li>Gestion des utilisateurs et des groupes via LDAP / AD</li>
-                        <li>Analyse réseau et détection d’anomalies (Wireshark)</li>
-                        <li>Segmentation réseau et VLAN sécurisés (Cisco IOS)</li>
-                        <li>Mise en place de sauvegardes sécurisées (scripts Bash + droits d’accès)</li>
-                        <li>Sécurisation des serveurs Linux (SSH, permissions, sudo, services)</li>
+                        <li>Authentification forte (PHP + SQL haché)</li>
+                        <li>Serveur de messagerie sécurisé (SPF/DKIM/DMARC)</li>
+                        <li>Analyse réseau &amp; détection anomalies (Wireshark)</li>
+                        <li>Segmentation VLAN sécurisée (Cisco IOS)</li>
+                        <li>Sécurisation serveurs Linux (SSH, sudo, permissions)</li>
+                        <li>LDAP / Active Directory — gestion utilisateurs</li>
+                        <li>Sauvegardes sécurisées (scripts Bash + droits)</li>
                     </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SOFT SKILLS -->
+        <section style="background:var(--bg2);border-top:1px solid var(--border);padding:60px 0;">
+            <div class="container-wide">
+                <div class="section-header scroll-reveal"><h2>soft skills</h2></div>
+                <div class="soft-skills-grid">
+                    <article class="soft-skill-card hover-lift scroll-reveal">
+                        <h4 class="skill-name">Rigueur &amp; Organisation</h4>
+                        <p class="skill-desc">Je documente, je teste, je vérifie. Sur des infras réseau, on ne bricole pas.</p>
+                    </article>
+                    <article class="soft-skill-card hover-lift scroll-reveal delay-1">
+                        <h4 class="skill-name">Adaptabilité</h4>
+                        <p class="skill-desc">De GNS3 à GNU Radio en passant par PHP — j'ai appris à apprendre vite.</p>
+                    </article>
+                    <article class="soft-skill-card hover-lift scroll-reveal delay-2">
+                        <h4 class="skill-name">Esprit d'Équipe</h4>
+                        <p class="skill-desc">Les SAEs sont des projets d'équipe. Revue de config, debug à plusieurs, partage de docs — ça fait partie du boulot.</p>
+                    </article>
+                    <article class="soft-skill-card hover-lift scroll-reveal delay-3">
+                        <h4 class="skill-name">Gestion du Stress</h4>
+                        <p class="skill-desc">Quand une démo tourne mal ou qu'un service tombe, je reste calme et je débugge méthodiquement.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="soft-skills" class="soft-skills-section bg-secondary">
-            <div class="container-wide">
-                <h2 class="section-heading scroll-reveal">Compétences Transversales (Soft Skills)</h2>
+        <section class="cta-section scroll-reveal">
+            <h2 class="cta-title">Voir ces compétences<br><em>en action ?</em></h2>
+                        <p class="cta-sub">Les études de cas montrent comment tout ça se traduit en pratique.</p>
+            <a href="projects.html" class="btn btn-primary">ls projets/ --all</a>
+        </section>
 
-                <div class="soft-skills-grid">
-    <article class="soft-skill-card hover-lift scroll-reveal">
-        <h4 class="skill-name">Rigueur & Organisation</h4>
-        <p class="skill-desc">Méthodologie précise appliquée à la gestion d'infrastructures critiques.</p>
-    </article>
-    <article class="soft-skill-card hover-lift scroll-reveal delay-1">
-        <h4 class="skill-name">Adaptabilité</h4>
-        <p class="skill-desc">Capacité à évoluer sur de nouvelles technologies et environnements.</p>
-    </article>
-    <article class="soft-skill-card hover-lift scroll-reveal delay-2">
-        <h4 class="skill-name">Esprit d'Équipe</h4>
-        <p class="skill-desc">Collaboration fluide au sein de projets techniques complexes.</p>
-    </article>
-     <article class="soft-skill-card hover-lift scroll-reveal delay-3">
-        <h4 class="skill-name">Gestion du Stress</h4>
-        <p class="skill-desc">Efficacité maintenue lors de résolutions d'incidents.</p>
-    </article>
-</div>
-            </div>
-        </section>
-        
-        <section id="cta-contact" class="cta-section scroll-reveal">
-            <div class="container">
-                <h2 class="section-title">Voir ces compétences en action ?</h2>
-                <a href="projects.html" class="btn btn-primary btn-large hover-effect">
-                    Voir les Projets Réalisés
-                </a>
-            </div>
-        </section>
     </main>
 
     <footer class="main-footer">
-        <div class="container">
-            <p class="footer-links">
-                <a href="[URL_LINKEDIN]">LinkedIn</a> | <a href="[URL_GITHUB]">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
-            </p>
-            <p class="footer-copyright">
-                © 2025 Pape Birame Fall. Tous droits réservés.
-            </p>
+        <p class="footer-copyright">© 2025 Pape Birame Fall</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/pape-birame-fall" target="_blank">LinkedIn</a>
+            <a href="https://github.com/pape-21" target="_blank">GitHub</a>
+            <a href="mailto:contact@birame-fall.fr">Email</a>
         </div>
     </footer>
 
-    <script src="js/animations.js"></script> 
+    <script src="js/animations.js"></script>
 </body>
 </html>

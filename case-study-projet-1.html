@@ -3,36 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAE 2.1 : Construire un Réseau Informatique Multisites | Étude de Cas</title>
+    <title>SAE 2.1 : Réseau Informatique Multisites | Pape Birame Fall</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="header-fixed bg-light-transparent">
-        <div class="container header-content">
-            <a href="index.html" class="logo-text accent-color">Pape Birame Fall.</a>
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Accueil</a>
-                <a href="skills.html" class="nav-link">Compétences</a>
-                <a href="projects.html" class="nav-link active">Projets</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
-        </div>
+    <header class="header-fixed" id="header">
+        <div class="header-prompt"><span class="h-user">pape</span><span class="h-at">@</span><span class="h-host">birame-fall</span><span class="h-sep">:</span><span class="h-path">~/projets/01</span><span class="h-dollar">$</span></div>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">accueil</a>
+            <a href="skills.html" class="nav-link">compétences</a>
+            <a href="projects.html" class="nav-link active">projets</a>
+            <a href="contact.html" class="nav-link">contact</a>
+        </nav>
     </header>
-
     <main>
-        <section id="case-study-header" class="study-header scroll-reveal">
+        <section class="study-header scroll-reveal">
             <div class="container-narrow">
                 <h1 class="page-title">SAE 2.1 : Construction d'un Réseau Informatique Multisites</h1>
-
-                <p class="study-summary page-description">
-                    Mise en œuvre complète d'une infrastructure réseau étendu (WAN) pour interconnecter deux sites distants (Paris et Poitiers), incluant le routage dynamique OSPF, la segmentation VLAN, la translation d'adresses (NAT/PAT) et le déploiement de services applicatifs critiques (DNS, HTTP, SSH).
-                </p>
-
+                <p class="page-description">Deux sites à interconnecter, un FAI à simuler, des VLANs à segmenter — tout sous GNS3 avec du vrai Cisco IOS. Une infra WAN de bout en bout, de l'adressage aux services applicatifs.</p>
                 <div class="meta-tags">
-                    <span class="tag tag-role tag-tech accent-color">Rôle: Développeur/Administrateur Réseau</span>
-                    <span class="tag tag-date tag-tech">Date: Juin 2025</span>
+                    <span class="tag">Rôle : Admin Réseau</span>
+                    <span class="tag">Juin 2025</span>
+                    <span class="tag">GNS3 / Proxmox</span>
                 </div>
             </div>
         </section>
@@ -40,91 +34,73 @@
         <section class="study-visual scroll-reveal delay-1">
             <div class="container">
                 <figure>
-                    <img src="./images/gns3.png" alt="Schéma d'architecture du projet sur GNS3" class="full-width-image">
+                    <img src="./images/gns3.png" alt="Topologie GNS3 du réseau multisites" class="full-width-image">
                     <figcaption class="caption">Topologie de l'infrastructure multisites (Siège Paris, Filiale Poitiers et FAI) réalisée sur GNS3/Proxmox.</figcaption>
                 </figure>
             </div>
         </section>
 
-        <section id="problem" class="study-section scroll-reveal bg-secondary">
+        <section class="study-section scroll-reveal">
             <div class="container-narrow">
-                <h2 class="section-heading accent-color">1. Le Défi de l'Interconnexion Multisites</h2>
-                <p class="section-content">
-                    L'objectif de cette SAE était de simuler l'interconnexion sécurisée de deux entités d'entreprise distantes via un réseau opérateur (FAI). Ce scénario requérait des solutions de routage robustes, une segmentation fine des utilisateurs, et l'exposition contrôlée des services vers Internet.
-                </p>
-                <h3 class="subsection-heading">Objectifs Clés de l'Infrastructure</h3>
+                <h2 class="section-heading">1. Le Défi — Interconnexion Multisites</h2>
+                <p class="section-content">Le scénario : un siège à Paris, une filiale à Poitiers, reliés par un opérateur simulé. Routage inter-sites, VLANs par département, accès Internet maîtrisé — une vraie infrastructure d.entreprise à construire de zéro.</p>
+                <h3 class="subsection-heading">Objectifs Clés</h3>
                 <ul class="styled-list objectives-list">
                     <li><strong>Interconnexion multisites</strong> : Interconnecter les sites distants via un réseau FAI simulé.</li>
-                    <li><strong>Segmentation (VLANs)</strong> : Segmenter logiquement les réseaux locaux (VLANs : ADMIN, R&D, PROD, COMPTA, VENTE).</li>
-                    <li><strong>Services applicatifs</strong> : Déployer des services fondamentaux (DNS, HTTP, SSH).</li>
-                    <li><strong>Sécurité périmétrique</strong> : Mettre en place des règles de sécurité (PAT, ACL) pour contrôler l'accès Internet.</li>
+                    <li><strong>Segmentation (VLANs)</strong> : VLANs ADMIN, R&amp;D, PROD, COMPTA, VENTE.</li>
+                    <li><strong>Services applicatifs</strong> : DNS, HTTP (Apache/Nginx) et SSH.</li>
+                    <li><strong>Sécurité périmétrique</strong> : PAT et ACLs pour contrôler l'accès Internet.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="solution" class="study-section scroll-reveal">
+        <section class="study-section bg-secondary scroll-reveal">
             <div class="container-narrow">
-                <h2 class="section-heading accent-color">2. La Solution Technique & Mise en Œuvre</h2>
-
-                <p class="section-content">
-                    L'infrastructure a été entièrement virtualisée via <strong>GNS3</strong> et <strong>Proxmox</strong>, en utilisant des équipements <strong>Cisco</strong> (vIOS) pour le routage et la commutation multicouche (MLS-1, SW-1, etc.). La solution a été structurée en deux phases principales : l'infrastructure et les services.
-                </p>
-
-                <h3 class="subsection-heading">Phase 1 : Routage et Accès Réseau</h3>
+                <h2 class="section-heading">2. La Solution Technique</h2>
+                <p class="section-content">Infrastructure entièrement virtualisée via <strong>GNS3</strong> et <strong>Proxmox</strong>, équipements <strong>Cisco vIOS</strong> pour le routage et la commutation multicouche.</p>
+                <h3 class="subsection-heading">Phase 1 — Routage et Accès</h3>
                 <ul class="tech-list">
-                    <li><span class="tech-badge">Cisco IOS & Routage Inter-VLAN</span> : Configuration du <strong>MLS-1</strong> et des routeurs périphériques (R-GW-1, R-GW-2).</li>
-                    <li><span class="tech-badge">OSPF</span> : Déploiement du routage dynamique sur le réseau FAI pour assurer la connectivité entre les sites.</li>
-                    <li><span class="tech-badge">NAT / PAT</span> : Configuration de la translation d'adresses sur les routeurs de passerelle pour l'accès à Internet.</li>
+                    <li><span class="tech-badge">Cisco IOS &amp; Routage Inter-VLAN</span> — Configuration MLS-1 et routeurs périphériques (R-GW-1, R-GW-2).</li>
+                    <li><span class="tech-badge">OSPF</span> — Routage dynamique sur le réseau FAI pour la connectivité inter-sites.</li>
+                    <li><span class="tech-badge">NAT / PAT</span> — Translation d'adresses sur les routeurs de passerelle.</li>
                 </ul>
-
-                <h3 class="subsection-heading">Phase 2 : Déploiement des Services & Sécurité</h3>
+                <h3 class="subsection-heading">Phase 2 — Services &amp; Sécurité</h3>
                 <ul class="tech-list">
-                    <li><span class="tech-badge">Services Linux</span> : Installation et configuration des serveurs <strong>DNS</strong>, <strong>HTTP</strong> (Apache/Nginx) et <strong>SSH</strong> sur les machines virtuelles (VM) Linux.</li>
-                    <li><span class="tech-badge">ACLs</span> : Mise en œuvre de Listes de Contrôle d'Accès pour sécuriser et filtrer les flux entre les différents VLANs et vers la DMZ.</li>
+                    <li><span class="tech-badge">Services Linux</span> — DNS, HTTP (Apache/Nginx) et SSH sur VMs Linux.</li>
+                    <li><span class="tech-badge">ACLs</span> — Listes de Contrôle d'Accès pour filtrage inter-VLAN et DMZ.</li>
                 </ul>
-
+                <pre class="code-block"><code>! Extrait config OSPF R-GW-1
+router ospf 1
+ router-id 1.1.1.1
+ network 10.0.0.0 0.0.0.255 area 0
+ network 192.168.10.0 0.0.0.255 area 1</code></pre>
             </div>
         </section>
 
-        <section id="results" class="study-section scroll-reveal bg-secondary">
+        <section class="study-section scroll-reveal">
             <div class="container-narrow">
-                <h2 class="section-heading accent-color">3. Validation & Compétences Acquises</h2>
-                <p class="section-content">
-                    La validation finale a inclus une présentation orale et une démonstration des fonctionnalités, justifiant le plan d'adressage et le fonctionnement de chaque service installé.
-                </p>
-
-                <h3 class="subsection-heading">Bénéfices Techniques Confirmés</h3>
+                <h2 class="section-heading">3. Résultats &amp; Compétences</h2>
                 <ul class="styled-list results-list">
-                    <li><strong>Interconnexion Validée</strong> : Les services DNS/HTTP/SSH sont accessibles entre les sites de Paris et Poitiers.</li>
-                    <li><strong>Sécurité</strong> : Les règles NAT/PAT et les ACLs filtrent correctement les flux selon les politiques définies.</li>
-                    <li><strong>Maîtrise OSPF</strong> : Capacité à configurer et dépanner un protocole de routage dynamique complexe.</li>
+                    <li><strong>Interconnexion Validée</strong> — Services DNS/HTTP/SSH accessibles entre Paris et Poitiers.</li>
+                    <li><strong>Sécurité Opérationnelle</strong> — Règles NAT/PAT et ACLs filtrant correctement les flux.</li>
+                    <li><strong>Maîtrise OSPF</strong> — Configuration et dépannage d'un protocole de routage dynamique complexe.</li>
                 </ul>
-
-                <h3 class="subsection-heading">Expertise Développée</h3>
-                <p>
-                    J'ai acquis une expertise complète dans le cycle de vie d'un réseau étendu : de la planification (adressage) à l'exploitation (routage, services), en passant par la sécurité périmétrique (NAT/ACLs). La manipulation de GNS3 avec un serveur backend Proxmox a également consolidé mes compétences en virtualisation et en environnement de laboratoire.
-                </p>
+                <p class="section-content">Ce projet m'a forcé à penser l'infra dans sa globalité — du plan d'adressage au debug OSPF en passant par la conf des ACLs. Travailler sur GNS3 avec un backend Proxmox, c'est aussi se frotter aux contraintes d'un vrai labo virtuel.</p>
             </div>
         </section>
 
-        <section id="next-project-cta" class="cta-section scroll-reveal">
-            <div class="container">
-                <a href="projects.html" class="btn btn-secondary hover-effect">← Retour à la liste des projets</a>
-            </div>
+        <section class="cta-section scroll-reveal" style="padding:48px 32px;">
+            <a href="projects.html" class="btn btn-secondary">← ls projets/</a>
         </section>
     </main>
-
     <footer class="main-footer">
-        <div class="container">
-            <p class="footer-links">
-                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a> | <a href="https://github.com/pape-21">GitHub</a> | <a href="mailto:contact@birame-fall.fr">Email</a>
-            </p>
-            <p class="footer-copyright">
-                © 2025 Pape Birame Fall. Tous droits réservés.
-            </p>
+        <p class="footer-copyright">© 2025 Pape Birame Fall</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/pape-birame-fall" target="_blank">LinkedIn</a>
+            <a href="https://github.com/pape-21" target="_blank">GitHub</a>
+            <a href="mailto:contact@birame-fall.fr">Email</a>
         </div>
     </footer>
-
     <script src="js/animations.js"></script>
 </body>
 </html>
